@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://5e72md305yto"]
+
+[ext_resource type="Shader" uid="uid://cluk1k0nftgl4" path="res://shaders/breathing_bg.gdshader" id="1_shader"]
+[ext_resource type="Script" uid="uid://66ct7aivsplj" path="res://autoload/loading_screen.gd" id="2_script"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bg"]
+shader = ExtResource("1_shader")
+shader_parameter/time_speed = 0.25
+
+[sub_resource type="LabelSettings" id="LabelSettings_loading"]
+font_size = 72
+font_color = Color(0.92, 0.88, 1, 0.95)
+shadow_size = 24
+shadow_color = Color(0.54901963, 0.2509804, 0.101960786, 0.6509804)
+shadow_offset = Vector2(0, 0)
+
+[node name="LoadingScreen" type="CanvasLayer" unique_id=470968939]
+layer = 128
+script = ExtResource("2_script")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1227847198]
+material = SubResource("ShaderMaterial_bg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LoadingLabel" type="Label" parent="." unique_id=2136014512]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -120.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 0
+text = "Loading..."
+label_settings = SubResource("LabelSettings_loading")
+horizontal_alignment = 2
+vertical_alignment = 2
