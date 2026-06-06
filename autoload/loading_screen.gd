@@ -4,6 +4,8 @@ extends CanvasLayer
 
 var _loading_key: String = "loading"
 var _i18n: Node
+var _rebuild_tween: Tween
+var _is_transitioning := false
 
 @export var wave_speed: float = 0.3
 @export var char_delay: float = 0.15
@@ -20,7 +22,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if not visible:
+	if not visible or _is_transitioning:
 		return
 	var now: float = Time.get_ticks_msec() * 0.001
 	var chars: Array[Node] = _container.get_children()
@@ -53,6 +55,27 @@ func _on_locale_changed(_new_locale: String) -> void:
 
 
 func _rebuild_chars() -> void:
+	if not visible:
+		_rebuild_chars_internal()
+		return
+
+	if _rebuild_tween and _rebuild_tween.is_running():
+		_rebuild_tween.kill()
+	_rebuild_tween = create_tween()
+	_is_transitioning = true
+
+	_rebuild_tween.tween_property(_container, "modulate:a", 0.0, 0.25).set_ease(Tween.EASE_IN)
+	_rebuild_tween.tween_callback(func():
+		_rebuild_chars_internal()
+		_container.modulate.a = 0.0
+	)
+	_rebuild_tween.tween_property(_container, "modulate:a", 1.0, 0.25).set_ease(Tween.EASE_OUT)
+	_rebuild_tween.tween_callback(func():
+		_is_transitioning = false
+	)
+
+
+func _rebuild_chars_internal() -> void:
 	for child in _container.get_children():
 		_container.remove_child(child)
 		child.queue_free()

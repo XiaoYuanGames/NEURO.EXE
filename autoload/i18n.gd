@@ -3,7 +3,9 @@ extends Node
 
 signal locale_changed(new_locale: String)
 
-const TRANSLATIONS_DIR: String = "res://translations/"
+const CSV_FILES: Array[String] = [
+	"res://translations/game.csv",
+]
 const DEFAULT_LOCALE: String = "en"
 
 var _translations: Dictionary = {}
@@ -13,6 +15,7 @@ var _current_locale: String = DEFAULT_LOCALE
 func _ready() -> void:
 	_load_all_translations()
 	print("[I18n] Loaded %d locales: %s" % [_translations.size(), ", ".join(_translations.keys())])
+	set_locale(DEFAULT_LOCALE)
 
 
 func tr_key(key: String) -> String:
@@ -48,22 +51,14 @@ func get_available_locales() -> Array[String]:
 
 
 func _load_all_translations() -> void:
-	var dir: DirAccess = DirAccess.open(TRANSLATIONS_DIR)
-	if not dir:
-		push_warning("[I18n] Translations dir not found: " + TRANSLATIONS_DIR)
-		return
-	dir.list_dir_begin()
-	var file_name: String = dir.get_next()
-	while file_name != "":
-		if file_name.ends_with(".csv"):
-			_load_csv(TRANSLATIONS_DIR + file_name)
-		file_name = dir.get_next()
-	dir.list_dir_end()
+	for path in CSV_FILES:
+		_load_csv(path)
 
 
 func _load_csv(path: String) -> void:
 	var file: FileAccess = FileAccess.open(path, FileAccess.READ)
 	if not file:
+		push_warning("[I18n] Cannot open: " + path)
 		return
 
 	var header: String = file.get_line().strip_edges()
