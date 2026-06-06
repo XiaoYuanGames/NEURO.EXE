@@ -1,4 +1,3 @@
-class_name I18nSystem
 extends Node
 
 signal locale_changed(new_locale: String)
@@ -6,7 +5,7 @@ signal locale_changed(new_locale: String)
 const CSV_FILES: Array[String] = [
 	"res://translations/game.csv",
 ]
-const DEFAULT_LOCALE: String = "en"
+const DEFAULT_LOCALE: String = "zh"
 
 var _translations: Dictionary = {}
 var _current_locale: String = DEFAULT_LOCALE

@@ -12,7 +12,7 @@ shader_parameter/blur_size = 0.55
 
 [sub_resource type="LabelSettings" id="LabelSettings_loading"]
 font = ExtResource("3_5fj0j")
-font_size = 62
+font_size = 40
 font_color = Color(0.92, 0.88, 1, 0.95)
 shadow_size = 10
 shadow_color = Color(0.6431373, 0.49411765, 0.44313726, 0.3764706)
@@ -38,9 +38,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -600.0
-offset_top = -138.0
+offset_top = -130.0
 offset_right = -59.0
-offset_bottom = -68.0
+offset_bottom = -60.0
 grow_horizontal = 0
 grow_vertical = 0
 alignment = 2

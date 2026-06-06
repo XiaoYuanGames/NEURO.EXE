@@ -1,0 +1,34 @@
+{
+  "sections": [
+	{
+	  "role_key": "credits_role_director",
+	  "names_en": ["NEURO // SYSTEM"],
+	  "names_zh": ["NEURO // SYSTEM"]
+	},
+	{
+	  "role_key": "credits_role_programmer",
+	  "names_en": ["A. Cipher", "L. Vex", "M. Hoshino"],
+	  "names_zh": ["A. 密码", "L. 维克斯", "星野 M."]
+	},
+	{
+	  "role_key": "credits_role_artist",
+	  "names_en": ["Y. Tenma", "R. Aurora"],
+	  "names_zh": ["天马 Y.", "极光 R."]
+	},
+	{
+	  "role_key": "credits_role_musician",
+	  "names_en": ["K. Synth", "S. Echo"],
+	  "names_zh": ["合成 K.", "回声 S."]
+	},
+	{
+	  "role_key": "credits_role_publisher",
+	  "names_en": ["NEURO.LAB"],
+	  "names_zh": ["NEURO.LAB"]
+	},
+	{
+	  "role_key": "credits_role_special",
+	  "names_en": ["You, the player.", "Every tester.", "The rhythm within."],
+	  "names_zh": ["你,这位玩家。", "每一位测试者。", "心中的节奏。"]
+	}
+  ]
+}

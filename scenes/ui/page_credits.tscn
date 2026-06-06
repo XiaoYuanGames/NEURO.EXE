@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/page_credits.gd" id="1_credits"]
+[ext_resource type="Script" path="res://scenes/ui/components/page_header.gd" id="2_header"]
+[ext_resource type="FontFile" path="res://assets/fonts/MiSans-Regular.ttf" id="3_font_reg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0.04, 0.02, 0.09, 0.6)
+
+[node name="PageCredits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_credits")
+
+[node name="Header" type="Control" parent="."]
+anchor_right = 1.0
+custom_minimum_size = Vector2(0, 80)
+script = ExtResource("2_header")
+title_key = "credits_title"
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 90.0
+offset_bottom = -60.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="List" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="Footer" type="Control" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_bottom = 0.0
+
+[node name="Hint" type="Label" parent="Footer"]
+anchor_right = 1.0
+offset_top = 16.0
+offset_bottom = 36.0
+text = "滚轮 / 拖动滚动  •  ESC 返回"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("3_font_reg")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.7, 0.75, 0.95, 0.6)

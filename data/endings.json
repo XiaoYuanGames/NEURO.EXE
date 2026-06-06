@@ -1,0 +1,44 @@
+{
+  "endings": [
+	{
+	  "id": "true_end",
+	  "title_en": "TRUE END",
+	  "title_zh": "真相结局",
+	  "desc_en": "You uncovered NEURO's true purpose.",
+	  "desc_zh": "你揭开了 NEURO 真正的目的。",
+	  "unlocked": false
+	},
+	{
+	  "id": "good_end",
+	  "title_en": "GOOD END",
+	  "title_zh": "光明结局",
+	  "desc_en": "Restore harmony to the system.",
+	  "desc_zh": "为系统恢复了和谐。",
+	  "unlocked": false
+	},
+	{
+	  "id": "bad_end",
+	  "title_en": "BAD END",
+	  "title_zh": "沉沦结局",
+	  "desc_en": "Lose yourself to the rhythm.",
+	  "desc_zh": "迷失于节奏之中。",
+	  "unlocked": false
+	},
+	{
+	  "id": "secret_end",
+	  "title_en": "SECRET END",
+	  "title_zh": "隐藏结局",
+	  "desc_en": "Discover the path that was never indexed.",
+	  "desc_zh": "发现那条从未被索引的道路。",
+	  "unlocked": false
+	},
+	{
+	  "id": "neutral_end",
+	  "title_en": "NEUTRAL END",
+	  "title_zh": "平淡结局",
+	  "desc_en": "Walk away before the final note.",
+	  "desc_zh": "在最后一个音符前转身离去。",
+	  "unlocked": false
+	}
+  ]
+}

@@ -45,6 +45,17 @@ func hide_screen() -> void:
 	visible = false
 
 
+## 显示 loading 持续 seconds 秒,到时自动关闭。
+## 可选 on_complete 回调在关闭时调用。
+func show_with_duration(key: String, seconds: float, on_complete: Callable = Callable()) -> void:
+	show_screen(key)
+	var t: SceneTreeTimer = get_tree().create_timer(seconds)
+	await t.timeout
+	hide_screen()
+	if on_complete.is_valid():
+		on_complete.call()
+
+
 func set_loading_key(key: String) -> void:
 	_loading_key = key
 	_rebuild_chars()

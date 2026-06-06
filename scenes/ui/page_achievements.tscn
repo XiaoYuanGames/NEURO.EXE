@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/page_achievements.gd" id="1_page"]
+[ext_resource type="Script" path="res://scenes/ui/components/page_header.gd" id="2_header"]
+[ext_resource type="Script" path="res://scenes/ui/components/cyber_button.gd" id="3_btn"]
+[ext_resource type="FontFile" path="res://assets/fonts/MiSans-Semibold.ttf" id="4_font_sb"]
+[ext_resource type="FontFile" path="res://assets/fonts/MiSans-Regular.ttf" id="5_font_rg"]
+
+[node name="PageAchievements" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_page")
+
+[node name="Header" type="Control" parent="."]
+anchor_right = 1.0
+custom_minimum_size = Vector2(0, 80)
+script = ExtResource("2_header")
+title_key = "menu_achievements"
+
+[node name="Tabs" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+offset_top = 90.0
+offset_bottom = 140.0
+offset_left = 40.0
+offset_right = -40.0
+theme_override_constants/separation = 16
+
+[node name="AchBtn" type="Control" parent="Tabs"]
+custom_minimum_size = Vector2(140, 40)
+script = ExtResource("3_btn")
+
+[node name="EndBtn" type="Control" parent="Tabs"]
+custom_minimum_size = Vector2(140, 40)
+script = ExtResource("3_btn")
+
+[node name="Summary" type="Label" parent="Tabs"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "已解锁 0 / 0"
+vertical_alignment = 1
+theme_override_fonts/font = ExtResource("4_font_sb")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.85, 0.88, 1, 0.95)
+
+[node name="Progress" type="ProgressBar" parent="Tabs"]
+custom_minimum_size = Vector2(220, 12)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+value = 0.0
+show_percentage = false
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 150.0
+offset_left = 40.0
+offset_right = -40.0
+offset_bottom = -20.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Grid" type="GridContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+columns = 4
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+
+[node name="Empty" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+text = "暂无数据"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_fonts/font = ExtResource("5_font_rg")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.7, 0.75, 0.95, 0.6)

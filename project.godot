@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 I18n="*res://autoload/i18n.gd"
+AudioManager="*res://autoload/audio_manager.gd"
+UserSettings="*res://autoload/user_settings.gd"
 LoadingScreen="*res://scenes/ui/loading_screen.tscn"
 MCPRuntimeProbe="*res://addons/godot_mcp/runtime/mcp_runtime_probe.gd"
 

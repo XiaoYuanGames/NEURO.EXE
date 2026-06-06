@@ -1,0 +1,76 @@
+{
+  "achievements": [
+	{
+	  "id": "first_step",
+	  "title_en": "FIRST STEP",
+	  "title_zh": "初次同步",
+	  "desc_en": "Complete your first track.",
+	  "desc_zh": "完成你的第一首曲目。",
+	  "icon": "note",
+	  "unlocked": true
+	},
+	{
+	  "id": "perfect_chain",
+	  "title_en": "PERFECT CHAIN",
+	  "title_zh": "完美连击",
+	  "desc_en": "Achieve a 1000x combo without missing.",
+	  "desc_zh": "达成 1000 连击且无遗漏。",
+	  "icon": "chain",
+	  "unlocked": false
+	},
+	{
+	  "id": "all_clear",
+	  "title_en": "ALL CLEAR",
+	  "title_zh": "全清",
+	  "desc_en": "Clear every track on a song pack.",
+	  "desc_zh": "通关一个曲包的全部曲目。",
+	  "icon": "crown",
+	  "unlocked": false
+	},
+	{
+	  "id": "speed_demon",
+	  "title_en": "SPEED DEMON",
+	  "title_zh": "极速狂人",
+	  "desc_en": "Reach note speed 3.0.",
+	  "desc_zh": "音符速度达到 3.0。",
+	  "icon": "bolt",
+	  "unlocked": false
+	},
+	{
+	  "id": "true_end_seeker",
+	  "title_en": "SEEKER OF TRUTH",
+	  "title_zh": "真相追寻者",
+	  "desc_en": "Unlock the True Ending.",
+	  "desc_zh": "解锁真结局。",
+	  "icon": "eye",
+	  "unlocked": false
+	},
+	{
+	  "id": "secret_route",
+	  "title_en": "SECRET ROUTE",
+	  "title_zh": "隐藏路径",
+	  "desc_en": "Find a hidden track in the catalog.",
+	  "desc_zh": "在曲库中发现一首隐藏曲目。",
+	  "icon": "key",
+	  "unlocked": false
+	},
+	{
+	  "id": "rhythm_master",
+	  "title_en": "RHYTHM MASTER",
+	  "title_zh": "节奏大师",
+	  "desc_en": "Achieve S rank on 10 tracks.",
+	  "desc_zh": "在 10 首曲目上达成 S 评价。",
+	  "icon": "medal",
+	  "unlocked": false
+	},
+	{
+	  "id": "no_holds_barred",
+	  "title_en": "NO HOLDS BARRED",
+	  "title_zh": "全力以赴",
+	  "desc_en": "Clear an EX difficulty track on first try.",
+	  "desc_zh": "首次尝试即通关 EX 难度曲目。",
+	  "icon": "flame",
+	  "unlocked": false
+	}
+  ]
+}

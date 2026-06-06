@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/dialog_in_dev.gd" id="1_dlg"]
+[ext_resource type="Script" path="res://scenes/ui/components/cyber_button.gd" id="2_btn"]
+[ext_resource type="FontFile" path="res://assets/fonts/MiSans-Semibold.ttf" id="3_font_semibold"]
+[ext_resource type="FontFile" path="res://assets/fonts/MiSans-Regular.ttf" id="4_font_regular"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.05, 0.025, 0.12, 0.96)
+border_color = Color(0.13, 0.82, 0.93, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.55, 0.15, 0.95, 0.4)
+shadow_size = 24
+shadow_offset = Vector2(0, 0)
+
+[node name="DialogInDev" type="CanvasLayer"]
+layer = 200
+script = ExtResource("1_dlg")
+
+[node name="Overlay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0)
+mouse_filter = 0
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -130.0
+offset_right = 260.0
+offset_bottom = 130.0
+mouse_filter = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_bottom = 28
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="Panel/Margin/VBox"]
+layout_mode = 2
+text = "提示"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("3_font_semibold")
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.13, 0.82, 0.93, 1)
+
+[node name="Message" type="Label" parent="Panel/Margin/VBox"]
+layout_mode = 2
+text = "该功能仍在开发中,敬请期待。"
+horizontal_alignment = 1
+autowrap_mode = 2
+theme_override_fonts/font = ExtResource("4_font_regular")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.92, 0.94, 1, 0.95)
+
+[node name="OkBtn" type="Control" parent="Panel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+script = ExtResource("2_btn")

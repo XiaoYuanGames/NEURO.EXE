@@ -1,5 +1,134 @@
 key,en,zh
-loading,Loading...,加载中...
+loading,Now Loading...,加载中...
+loading_start,Now Loading...,加载中...
 start,Start,开始
 settings,Settings,设置
 quit,Quit,退出
+menu_start,Start,开始游戏
+menu_continue,Continue,继续游戏
+menu_achievements,Achievements & Endings,成就与结局
+menu_settings,Settings,设置
+menu_credits,Credits,制作人员
+menu_quit,Quit,退出
+menu_hint,↑↓ Navigate / ENTER Confirm,↑↓ 选择 / ENTER 确认
+tagline,RHYTHM // SYSTEM ONLINE,RHYTHM // SYSTEM ONLINE
+version_tag,v0.1.0 — DEMO,v0.1.0 — DEMO
+dialog_in_dev_title,Notice,提示
+dialog_in_dev_message,This feature is still under development.,该功能仍在开发中,敬请期待。
+dialog_ok,OK,确定
+dialog_cancel,Cancel,取消
+dialog_quit_title,Quit Game?,退出游戏
+dialog_quit_message,Are you sure you want to quit?,确定要退出游戏吗？
+dialog_reset_title,Reset Settings?,重置设置
+dialog_reset_message,Reset all settings to defaults? This cannot be undone.,确定要将所有设置恢复为默认值？此操作无法撤销。
+dialog_saved,Settings saved.,设置已保存。
+dialog_reset_done,Settings have been reset.,设置已恢复默认。
+dialog_wait_key,Press any key...,请按任意键…
+dialog_unbound,Unbound,未绑定
+tab_achievements,Achievements,成就
+tab_endings,Endings,结局
+ach_locked,??? / Locked,??? / 未解锁
+ach_progress,Progress,达成率
+ach_total,Unlocked,已解锁
+ach_empty,No data available.,暂无数据。
+credits_title,Credits,制作人员
+credits_role_director,Director,总监
+credits_role_programmer,Programmer,程序
+credits_role_artist,Artist,美术
+credits_role_musician,Music,音乐
+credits_role_special,Special Thanks,特别感谢
+credits_role_publisher,Publisher,发行
+credits_thanks,Thank you for playing.,感谢您的游玩。
+credits_scroll_hint,Wheel / Drag to scroll  ?  ESC to return,滚轮 / 拖动滚动  ?  ESC 返回
+set_title,Settings,设置
+set_general,General,通用
+set_display,Display,显示
+set_audio,Audio,音频
+set_gameplay,Gameplay,玩法
+set_controls,Controls,控制
+set_advanced,Advanced,高级
+set_about,About,关于
+set_language,Language,语言
+set_language_en,English,英文
+set_language_zh,简体中文,简体中文
+set_fullscreen,Display Mode,显示模式
+set_mode_windowed,Windowed,窗口
+set_mode_borderless,Borderless,无边框
+set_mode_fullscreen,Fullscreen,全屏
+set_resolution,Resolution,分辨率
+set_vsync,VSync,垂直同步
+set_vsync_off,Off,关闭
+set_vsync_on,On,开启
+set_vsync_adaptive,Adaptive,自适应
+set_fps_cap,FPS Limit,帧率限制
+set_brightness,Brightness,亮度
+set_contrast,Contrast,对比度
+set_antialias,Anti-Aliasing,抗锯齿
+set_aa_off,Off,关闭
+set_aa_msaa2,MSAA 2x,MSAA 2x
+set_aa_msaa4,MSAA 4x,MSAA 4x
+set_aa_msaa8,MSAA 8x,MSAA 8x
+set_aa_fxaa,FXAA,FXAA
+set_quality,Quality Preset,画质预设
+set_quality_low,Low,低
+set_quality_mid,Medium,中
+set_quality_high,High,高
+set_quality_ultra,Ultra,极高
+set_master,Master Volume,主音量
+set_music,Music Volume,音乐音量
+set_sfx,SFX Volume,音效音量
+set_hit,Hit Volume,打击音量
+set_mute_all,Mute All,全部静音
+set_audio_dev,Audio Device,输出设备
+set_test,Test,试听
+set_note_speed,Note Speed,音符速度
+set_judgment_offset,Judgment Offset,判定偏移(ms)
+set_lane_count,Lane Count,键数
+set_lane_4k,4K,4K
+set_lane_5k,5K,5K
+set_lane_6k,6K,6K
+set_lane_7k,7K,7K
+set_lane_8k,8K,8K
+set_bg_dim,BG Dim,背景暗化
+set_bga,BGA (Background Anim),背景动画
+set_auto_play,Auto Play,自动播放(辅助)
+set_preview_lbl,Preview,试玩预览
+set_keybind_lane_1,Lane 1,第1轨
+set_keybind_lane_2,Lane 2,第2轨
+set_keybind_lane_3,Lane 3,第3轨
+set_keybind_lane_4,Lane 4,第4轨
+set_keybind_lane_5,Lane 5,第5轨
+set_keybind_lane_6,Lane 6,第6轨
+set_keybind_lane_7,Lane 7,第7轨
+set_keybind_lane_8,Lane 8,第8轨
+set_keybind_pause,Pause,暂停
+set_keybind_reset,Reset Keybinds,恢复默认键位
+set_show_fps,Show FPS,显示帧率
+set_show_judge,Show Judge,显示判定
+set_show_combo,Show Combo,显示连击
+set_particle,Particle Density,粒子密度
+set_particle_low,Low,低
+set_particle_mid,Medium,中
+set_particle_high,High,高
+set_bloom,Bloom,泛光
+set_chromatic,Chromatic Aberration,色散
+set_motion_blur,Motion Blur,动态模糊
+set_screen_shake,Screen Shake,屏幕震动
+set_cb_mode,Color Blind Mode,色盲模式
+set_cb_off,Off,关闭
+set_cb_prot,Protanopia,红色盲
+set_cb_deut,Deuteranopia,绿色盲
+set_cb_trit,Tritanopia,蓝色盲
+set_ui_scale,UI Scale,界面缩放(%)
+set_reduce_motion,Reduce Motion,减少动画
+set_high_contrast,High Contrast,高对比
+set_reset,Reset to Defaults,恢复默认
+set_apply,Apply,应用
+set_back,Back,返回
+set_modified,Modified,已修改
+set_about_text,NEURO.EXE — A sci-fi rhythm game demo.,NEURO.EXE — 科幻节奏音游 Demo。
+set_about_engine,Built with Godot 4.6,基于 Godot 4.6 构建
+set_about_credit_btn,View Credits,查看制作人员
+set_toast_saved,Saved,已保存
+set_toast_reset,Reset to defaults,已恢复默认
+fps_label,FPS: %d,FPS: %d
